@@ -57,7 +57,8 @@
     </div>
 
     <div class="form-group">
-      <button class="btn btn-primary">Lưu</button>
+      <!-- Nút Lưu — QUAN TRỌNG: phải có type="submit" -->
+      <button type="submit" class="btn btn-primary">Lưu</button>
 
       <button
         v-if="contactLocal._id"
@@ -110,7 +111,7 @@ export default {
     });
 
     return {
-      contactLocal: { ...this.contact }, // tạo bản sao để tránh sửa trực tiếp props
+      contactLocal: { ...this.contact }, // bản sao tránh sửa props
       contactFormSchema,
     };
   },
